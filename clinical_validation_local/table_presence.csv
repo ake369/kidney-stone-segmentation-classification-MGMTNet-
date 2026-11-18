@@ -1,0 +1,25 @@
+level,method,metric,value,ci_lo,ci_hi
+slice,mask-derived,sensitivity,0.99,0.963184504,1
+slice,mask-derived,specificity,0.978021978,0.965853659,0.9921875
+slice,mask-derived,PPV,0.98019802,0.945301735,0.996140101
+slice,mask-derived,NPV,0.988888889,0.948717949,1
+slice,mask-derived,accuracy,0.984293194,0.970045867,0.995123998
+slice,mask-derived,AUC,0.994162088,0.980177967,0.999881128
+slice,classifier head,sensitivity,0.96,0.923910455,0.985719316
+slice,classifier head,specificity,0.972527473,0.933333333,1
+slice,classifier head,PPV,0.974619289,0.911575313,1
+slice,classifier head,NPV,0.956756757,0.865971688,0.988167421
+slice,classifier head,accuracy,0.965968586,0.94188155,0.987180511
+slice,classifier head,AUC,0.994807692,0.986127057,0.999446595
+patient,mask-derived,sensitivity,1,1,1
+patient,mask-derived,specificity,0.428571429,0,0.8
+patient,mask-derived,PPV,0.80952381,0.631578947,0.954545455
+patient,mask-derived,NPV,1,1,1
+patient,mask-derived,accuracy,0.833333333,0.666666667,0.958333333
+patient,mask-derived,AUC,0.966386555,0.875,1
+patient,classifier head,sensitivity,1,1,1
+patient,classifier head,specificity,0.714285714,0.333333333,1
+patient,classifier head,PPV,0.894736842,0.736842105,1
+patient,classifier head,NPV,1,1,1
+patient,classifier head,accuracy,0.916666667,0.791666667,1
+patient,classifier head,AUC,0.966386555,0.8828125,1

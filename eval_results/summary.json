@@ -1,0 +1,24 @@
+[
+  {
+    "split": "test",
+    "n_images": 168,
+    "accuracy_%": 100.0,
+    "sensitivity_recall_stone": 1.0,
+    "specificity": 1.0,
+    "precision_stone": 1.0,
+    "f1_stone": 1.0,
+    "roc_auc": 1.0,
+    "loss_total": 0.9083044642493838,
+    "loss_kidney": 0.14249679162388756,
+    "loss_stone": 0.4883027445702326,
+    "loss_cls": 0.04169192945673352,
+    "kidney_dice_all": 0.8947855331713245,
+    "kidney_iou_all": 0.8186402319087869,
+    "kidney_dice_gt_positive": 0.8947855331713245,
+    "kidney_iou_gt_positive": 0.8186402319087869,
+    "stone_dice_all": 0.8758459442492184,
+    "stone_iou_all": 0.8202099488402548,
+    "stone_dice_gt_positive": 0.7607484172625714,
+    "stone_iou_gt_positive": 0.6481358000492475
+  }
+]

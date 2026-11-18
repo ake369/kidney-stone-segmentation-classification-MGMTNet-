@@ -1,0 +1,3 @@
+,split,file,mask,y,p,pred
+TP,test,F:\Paper_Production_#1(Exp_1)\Last_data\data\test\images\Stone\P173_RA_M_S_I23.png,F:\Paper_Production_#1(Exp_1)\Last_data\data\test\masks\Stone\P173_RA_M_S_I23.png,1,0.9993175268173218,1
+TN,test,F:\Paper_Production_#1(Exp_1)\Last_data\data\test\images\Non-Stone\P019_FA_M_NS_I03.png,F:\Paper_Production_#1(Exp_1)\Last_data\data\test\masks\Non-Stone\P019_FA_M_NS_I03.png,0,0.0086593022570014,0

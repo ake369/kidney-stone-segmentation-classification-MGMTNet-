@@ -1,0 +1,13 @@
+data/
+Last_data/
+*.png
+*.jpg
+*.jpeg
+*.dcm
+*.tif
+*.pth
+*.pt
+checkpoints/
+__pycache__/
+.venv/
+myenv/

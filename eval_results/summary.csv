@@ -1,0 +1,2 @@
+split,n_images,accuracy_%,sensitivity_recall_stone,specificity,precision_stone,f1_stone,roc_auc,loss_total,loss_kidney,loss_stone,loss_cls,kidney_dice_all,kidney_iou_all,kidney_dice_gt_positive,kidney_iou_gt_positive,stone_dice_all,stone_iou_all,stone_dice_gt_positive,stone_iou_gt_positive
+test,168,100.0,1.0,1.0,1.0,1.0,1.0,0.9083044642493838,0.14249679162388756,0.4883027445702326,0.04169192945673352,0.8947855331713245,0.8186402319087869,0.8947855331713245,0.8186402319087869,0.8758459442492184,0.8202099488402548,0.7607484172625714,0.6481358000492475
