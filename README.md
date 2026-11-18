@@ -1,6 +1,6 @@
 # MGMTNet: Segmentation-Guided Multi-Task Kidney Stone Analysis on CT
 
-Official code for the manuscript **"A Multi-Task Hybrid CNN–Transformer Framework for Segmentation-Guided Kidney Disease Classification from CT Images"** (under review).
+Official code for the manuscript **"A Multi-Task Hybrid Framework for Segmentation-Guided Kidney Disease Classification"** (under review).
 
 MGMTNet jointly segments the kidney, segments the stone, and classifies each axial CT slice as stone or non-stone. The predicted kidney and stone masks condition the classifier through mask-guided attention, so the diagnosis is tied to the network's own estimate of the anatomy.
 
@@ -9,23 +9,12 @@ MGMTNet jointly segments the kidney, segments the stone, and classifies each axi
 ## Highlights
 
 - **One network, three outputs:** kidney mask, stone mask and slice-level stone/non-stone prediction (23.52 M parameters).
-- **Segmentation-guided classification:** the predicted masks are resized to the bottleneck resolution and gate the bottleneck features before classification.
+- **Segmentation-guided classification:** the predicted masks are resized to the bottleneck resolution and gate the bottleneck features before classification.s
 - **Compact hybrid backbone:** a CNN encoder trained from scratch with a 4-layer Transformer bottleneck fused residually.
 - **Quantitative explainability:** Grad-CAM, Grad-CAM++ and LayerCAM evaluated for localisation and faithfulness against a random-map baseline.
 - **Independent local validation:** evaluation on a separate single-hospital cohort without retraining.
 
 ## Model
-
-| Component | Description |
-|---|---|
-| Input | 3 × 512 × 512 (grayscale slice scaled to [0, 1] and replicated over three channels) |
-| Encoder | Four double-convolution stages (32, 64, 128, 256 channels) plus a 512-channel CNN bottleneck at 1/16 resolution |
-| Transformer bottleneck | 4 layers, 8 heads, 512-d tokens, feed-forward dimension 2048 (post-norm, ReLU), fused with the CNN bottleneck by residual addition |
-| Decoders | Two structurally identical, independently parameterised decoders (kidney, stone) with four skip connections |
-| Mask-guided attention | Predicted kidney and stone probability maps are resized to the bottleneck, passed through a 3×3 → 1×1 convolutional gate, and applied as a residual spatial gate, followed by squeeze-and-excitation channel attention (reduction ratio 16) |
-| Classification head | Global average pooling, then a two-layer fully connected head with batch normalisation and dropout 0.3 |
-| Outputs | `kidney_logits`, `stone_logits`, `cls_logits` (plus `m_k`, `m_s`) |
-
 The model definition is in `src/model.py`.
 
 ## Repository structure
@@ -91,12 +80,10 @@ python src/train.py --config configs/default.yaml --data-root <data-root> --seed
 | Loss | BCE + soft Dice for each decoder, cross-entropy for classification, task weights (α, β, γ) = (1.0, 1.5, 0.8) |
 | Model selection | Highest validation classification accuracy |
 
-Exact values are in `configs/default.yaml`.
-
 ## Evaluation
 
 ```bash
-python src/evaluate.py --ckpt checkpoints/mgmtnet_best.pth --data-root <data-root> --split test
+python src/evaluate.py --ckpt checkpoints/model.pth --data-root <data-root> --split test
 ```
 
 - Kidney Dice and IoU are computed on all test slices; stone Dice and IoU are computed on stone-positive slices only.
