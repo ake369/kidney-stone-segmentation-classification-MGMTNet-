@@ -1,6 +1,6 @@
-# MGMTNet: Segmentation-Guided Multi-Task Kidney Stone Analysis on CT
+# Segmentation-guided Kidney Disease classification on CT
 
-Official code for the manuscript **"A Multi-Task Hybrid Framework for Segmentation-Guided Kidney Disease Classification"** (under review).
+Official code for the manuscript **"A Multi-Task Architecture for Segmentation-Guided Kidney Disease Classification"** (under review).
 
 MGMTNet jointly segments the kidney, segments the stone, and classifies each axial CT slice as stone or non-stone. The predicted kidney and stone masks condition the classifier through mask-guided attention, so the diagnosis is tied to the network's own estimate of the anatomy.
 
