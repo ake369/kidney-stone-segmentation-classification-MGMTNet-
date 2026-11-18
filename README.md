@@ -124,11 +124,11 @@ The figures show Grad-CAM, Grad-CAM++ and LayerCAM maps for the stone class (com
 
 ## Pretrained checkpoint
 
-The trained checkpoint is available on the [Releases](../../releases) page (tag `v1.0`).
+The trained checkpoint is available in the directory Checkpoint/
 
 - File: `mgmtnet_best.pth`
 - SHA-256: `<hash>`
-- Selected by highest validation classification accuracy (epoch `<n>`).
+- Selected by highest validation classification accuracy (epoch `48`).
 - Trained on the public-derived training split only; no local-cohort data were used for training, model selection or threshold selection.
 
 ## Expected results
@@ -164,11 +164,11 @@ The model processes 2D axial slices; it was trained on a single public source an
 
 ## Data availability
 
-The source images are publicly available from the original dataset. The pixel-level annotations and the independent local cohort are not publicly available because of [patient privacy / institutional policy].
+The source images are publicly available from the original dataset. The pixel-level annotations and the independent local cohort are not publicly available because of patient privacy.
 
 ## Ethics
 
-The independent local cohort was analysed retrospectively with institutional ethics approval [details withheld for blind review]. All images were anonymised before analysis.
+The independent local cohort was analysed retrospectively with institutional ethics approval. All images were anonymised before analysis.
 
 ## Citation
 
@@ -182,7 +182,6 @@ If you use this code, please cite the paper:
   year    = {2026}
 }
 ```
-
 ## License
 
 The code is released under the MIT License (see `LICENSE`). The licences of the source images and of any annotations are separate and are governed by their original terms.
